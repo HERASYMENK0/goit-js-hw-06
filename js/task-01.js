@@ -1,9 +1,15 @@
-const menuItemsByTagName = document.querySelectorAll("ul#categories li.item");
-console.log("Number of categories:", menuItemsByTagName.length);
+const catList = document.querySelector("#categories");
 
-menuItemsByTagName.forEach((element) => {
-  const elementName = element.querySelector("h2").textContent;
-  const elementItem = element.querySelectorAll("ul li");
-  console.log("Category:", elementName);
-  console.log("Elements:", elementItem.length);
-});
+const catItems = catList.children;
+
+console.log(`Number of categories: ${catItems.length}`);
+
+for (let i = 0; i < catItems.length; i++) {
+  const category = catItems[i];
+  const categoryName = category.firstElementChild.textContent;
+  const categoryItems = category.lastElementChild.children;
+
+  console.log(
+    `Category: ${categoryName}. Number of items: ${categoryItems.length}`
+  );
+}

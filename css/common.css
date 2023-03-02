@@ -22,7 +22,15 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
-.images-size {
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.images-size{
+display: flex;
+flex-direction: column;
   width: 640px;
-  gap: 10;
+  
 }
